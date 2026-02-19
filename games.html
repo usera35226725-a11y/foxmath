@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unblocked games</title>
+    <style>
+        h1,h2,h3,h2,a,div {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            color: blue;
+            font-size: large;
+        }
+        img {
+            width: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>welcome to fox's awesome amazing game website thats hopefully not blocked!</h1>
+    <hr>
+    <div>
+    <h2><img src="mc.png"> Minecraft</h2>
+    <a href="minecraft/1-12-2.html">Minecraft 1.12.2 (Recommended Version)</a>
+    <br>
+    <a href="minecraft/1-8-8.html">Minecraft 1.8.8</a>
+    <br>
+    <a href="minecraft/1-5-2.html">Minecraft 1.5.2</a>
+    <br>
+    <h2><img src="adofai.png"> A Dance of Fire and Ice</h2>
+    <a href="adofai/index.html">A Dance of Fire And Ice (scratch)</a>
+    <br>
+    <a href="adofai_unity/index.html">A Dance of Fire And Ice (unity)</a>
+    <br>
+    <h2><img src="gd.png"> Geometry Dash</h2>
+    <a href="gd/index.html">Geometry Lite 1.7</a>
+    <br>
+    <a href="gd_scratch/index.html">Geometry Dash 1.5 (scratch)</a>
+    </div>
+    
+    <script>
+        const correctPassword = "5461"; // same password as index.html
+
+        const params = new URLSearchParams(window.location.search);
+        const passwordParam = params.get("password");
+
+        if (passwordParam !== correctPassword) {
+            alert("enter the password bro");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

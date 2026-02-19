@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    password:
+    <input type="password">
+    <button type="submit">></button>
+    <script>
+        const correctPassword = "5461"; // change this
+
+        const input = document.querySelector('input[type="password"]');
+        const button = document.querySelector('button[type="submit"]');
+
+        // Create error message
+        const errorText = document.createElement("p");
+        errorText.style.color = "red";
+        errorText.style.display = "none";
+        errorText.textContent = "Password incorrect";
+        document.body.appendChild(errorText);
+
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (input.value === correctPassword) {
+                errorText.style.display = "none";
+                alert("access granted, have fun");
+                window.location.href = "games.html?password=" + encodeURIComponent(correctPassword);
+            } else {
+                errorText.style.display = "block";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
